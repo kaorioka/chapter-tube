@@ -9,14 +9,12 @@
   padding-bottom: 30px;
   border-bottom: 1px #ddd solid;
   margin-bottom: 30px;
-
-
   
   &--list {
     width: 32%;
     position: relative;
     padding-bottom: 20px;
-    
+
     & a{
       text-decoration: none;
       width: 100%;
@@ -35,15 +33,6 @@
       width: 100%;
       padding-bottom: 5px;
   }
-  }
-
-  .chapter-pray-time {
-    position: absolute;
-    top: 128px;
-    right: 0;
-    background-color: #000;
-    color: #fff;
-    padding: 3px 3px;
   }
 }
 
