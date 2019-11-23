@@ -1,0 +1,130 @@
+*{
+  color: #0D0D0D;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both
+}
+
+h2.heading {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  background-color: #016E33;
+}
+
+.global-area {
+  height: 50px;
+  background-color: #016E33;
+  line-height: 50px;
+  display: block;
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.45);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+    
+    &--logo {
+      padding-left: 50px;
+      
+      & a{
+        font-size: 24px;
+        font-weight: 800;
+        color:#fff;
+        text-decoration: none;
+      }
+      
+    }
+
+    &--nav {
+      float: right;
+      position: absolute;
+      top: 0;
+      right: 0px;
+      padding-right: 30px;
+  
+      &--page {
+        float: left;
+        list-style: none;
+        padding: 0px 15px;
+
+        & i.fa {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        &:hover{
+          background-color: #fff;
+          text-decoration: none;
+
+          & i.fa{
+            color: #016E33;
+            text-decoration: none;
+          }
+        }
+
+        &.activ{
+          background-color: #fff;
+
+          & i.fa{
+            color: #016E33;
+            text-decoration: none;
+          }
+
+        }
+      }  
+  }
+}
+
+
+#content {
+  width: 100%;
+  height: 100%;
+  background-color: #016E33;
+  // background-color: #f2f2f2z;
+  display: block;
+  padding-top: 50px;
+  background-image: url(zakoshi_bkimg_r), url(zakoshi_bkimg_l);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right,left;
+  background-position-y: top;
+  background-attachment: fixed,fixed;
+
+  
+  h2.heading {
+    font-size: 18px;}
+
+  .main {
+    width: 680px;
+    margin: 0 auto; 
+    position: relative;
+  }
+
+  #info {
+    padding: 25px;
+    background: #f2f2f2;
+  }
+
+}
+
+#page_top {
+  position: absolute;
+  top: 800px;
+  z-index: 999;
+  right: -50px;
+
+
+  .page_top {
+    position: fixed;
+  }
+
+}
