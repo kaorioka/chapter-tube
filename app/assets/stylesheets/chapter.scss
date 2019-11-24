@@ -57,7 +57,13 @@
 
 
 .movie {
-  // background: #f2f2f2;
+  background: #f2f2f2;
+  background-image: url(icon_loader_f_ww_01_s1.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+
 
   &--info-box {
     display: flex;
