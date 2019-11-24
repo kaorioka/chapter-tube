@@ -1,24 +1,33 @@
-# README
+# メモ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## moviesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false,index: true|
+|youtube_id|text|null: false, unique|
+|play_time|integer|null: false|
 
-Things you may want to cover:
+### Association
+- has_many : chaptars, through: :movie_chaptars
 
-* Ruby version
+## movie_chaptarsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|movie_id|references|null: false, foreign_key: true|
+|chaptar_id|references|null: false, foreign_key: true|
 
-* System dependencies
+### Association
+- belongs_to movie
+- belongs_to chapter
 
-* Configuration
+## chapterテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false,index: true|
+|kana|string|null: false,index: true|
+|start_time|integer|null: false|
+|end_time|integer|null: false|
+|movie_id|references|null: false, foreign_key: true|
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to movie, through: :movie_chaptars
