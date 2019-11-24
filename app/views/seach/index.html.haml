@@ -1,0 +1,65 @@
+= render 'layouts/hedder'
+#content
+  .main
+    = render 'layouts/page_top'
+    .seach
+      #info  
+        %h2.heading
+          検索する
+        %input#seach{name: "seach", size:"40", type: "text"}
+        %h3.heading
+          検索結果
+          %span.result 一致した動画は5件
+        %ul.movie-box
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+        %h3.heading おすすめ動画
+        %ul.movie-box
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
+          %li.movie-box--list
+            = link_to "#" do
+              = image_tag "http://img.youtube.com/vi/6XDjA9d_05M/sddefault.jpg", class: 'movie-box--list--thumb', alt: "movietitle"
+              .chapter-title 誇張しすぎたパーフェクトヒューマン
+              .chapter-pray-time 00:30
