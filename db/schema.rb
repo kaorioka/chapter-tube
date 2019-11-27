@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_050422) do
+ActiveRecord::Schema.define(version: 2019_11_27_143700) do
 
   create_table "chapters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "kana"
+    t.text "title"
+    t.text "kana"
     t.integer "start_time"
     t.integer "end_time"
     t.datetime "created_at", null: false
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2019_11_25_050422) do
   end
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.text "youtube_id"
+    t.text "title"
+    t.string "youtube_id"
     t.integer "play_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
