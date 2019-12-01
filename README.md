@@ -10,16 +10,6 @@
 ### Association
 - has_many : chaptars, through: :movie_chaptars
 
-## movie_chaptarsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|movie_id|references|null: false, foreign_key: true|
-|chaptar_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to movie
-- belongs_to chapter
-
 ## chapterテーブル
 |Column|Type|Options|
 |------|----|-------|
