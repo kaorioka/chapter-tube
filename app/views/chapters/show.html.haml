@@ -7,7 +7,8 @@
         %iframe#player{frameborder: "0", height:"390", src: "https://www.youtube.com/embed/#{@chapter.movie.youtube_id}?start=412&end=504", type: "text/html", width: "680"}
       #info
         .movie--info-box
-          %h1.movie--info-box__title 誇張しすぎたパーフェクトヒューマン
+          %h1.movie--info-box__title
+            = @chapter.title
           %ul.movie--info-box__actions
             %li.movie--info-box__actions.favo
               = link_to "#" do
@@ -20,57 +21,9 @@
         .movie--details
           %h2#chapters.heading 動画の詳細
           %h3.origin-title
-            ハリウッドザコシショウのものまね３０連発SEASON⑧-1
+            = @chapter.movie.title
             %span より
         %ul.movie--chapters
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter.activ             
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
-          %li.movie--chapter              
-            = link_to "#" do
-              誇張しすぎたパーフェクトヒューマン
-              %span 10:00~12:00
           %li.movie--chapter              
             = link_to "#" do
               誇張しすぎたパーフェクトヒューマン
