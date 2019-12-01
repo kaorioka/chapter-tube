@@ -1,0 +1,6 @@
+%li.movie-box--list
+  = link_to "#" do
+    = image_tag "http://img.youtube.com/vi/#{chapter.movie.youtube_id}/sddefault.jpg", class: 'movie-box--list--thumb', alt: "#{chapter.title}"
+    .chapter-title
+      = chapter.title
+    .chapter-pray-time 00:30
