@@ -1,4 +1,6 @@
 $(function () {
+
+
   $('a[href^="#"]').click(function () {
     var speed = 500;
     var headerHight = 55; //ヘッダの高さ
@@ -8,7 +10,6 @@ $(function () {
     $("html, body").animate({ scrollTop: position }, speed, "swing");
     return false;
   });
-
 
 
 });
