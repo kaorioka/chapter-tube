@@ -23,5 +23,5 @@
 - belongs_to movie, through: :movie_chaptars
 
 ##お世話になった記事
-文字列を省略して「…」を付与する方法 – CSS/jQuery
+- 文字列を省略して「…」を付与する方法 – CSS/jQuery
 https://dev.classmethod.jp/ria/string-replace-css-and-jquery/
