@@ -5,11 +5,11 @@
     .dashboard
       = image_tag "cover", class: 'cover-img', alt: "動画でポン"
       #info          
-        .popularity
-          %h2.heading 人気の動画
-        %ul.movie-box
-          = render partial: 'layouts/movie-box', collection: @chapter, as: 'chapter'
-        .all-movie
+        -# .popularity
+        -#   %h2.heading 人気の動画
+        -# %ul.movie-box
+        -#   = render partial: 'layouts/movie-box', collection: @chapter, as: 'chapter'
+        .random-movie
           %h2.heading ランダム
         %ul.movie-box
           = render partial: 'layouts/movie-box', collection: @chapter, as: 'chapter'
