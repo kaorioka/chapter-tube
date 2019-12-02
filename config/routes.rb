@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'movies/index'
-  get 'seach/index'
+  get 'users/index'
+  get 'favorites/index'
+  get 'seaches/index'
   resources :movies do
     resources :chapters
   end
