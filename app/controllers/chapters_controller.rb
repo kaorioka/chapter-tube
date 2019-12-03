@@ -5,7 +5,7 @@ class ChaptersController < ApplicationController
 
   def show
     @chapter = Chapter.find(params[:id])
-    @chapters = Chapter.find(params[:movie_id])
+    @chapters = Chapter.where(movie_id: @chapter.movie)
   end
 
 end
