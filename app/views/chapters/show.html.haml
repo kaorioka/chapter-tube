@@ -1,0 +1,38 @@
+= render 'layouts/hedder'
+#content
+  .main
+    = render 'layouts/sidemenu'
+    .movie
+      .movie--player
+        %iframe#player{frameborder: "0", height:"390", src: "https://www.youtube.com/embed/#{@chapter.movie.youtube_id}?start=#{@chapter.start_time}&end=#{@chapter.end_time}", type: "text/html", width: "680"}
+      #info
+        .movie--info-box
+          %h1{class: "movie--info-box__title", "data-chapter-id": "#{@chapter.id}"}
+            = @chapter.title
+          %ul.movie--info-box__actions
+            %li.movie--info-box__actions.favo
+              = link_to "#" do
+                .fa.fa-star-o
+                  %span お気に入り
+            %li.movie--info-box__actions.like
+              = link_to "#" do
+                .fa.fa-thumbs-o-up
+                  %span 12
+        .movie--details
+          %h2#chapters.heading 動画の詳細
+          %h3.origin-title
+            = @chapter.movie.title
+            %span より
+        %ul.movie--chapters
+          - @chapters.each do |chapter|
+            %li{class: "movie--chapter", "data-chapter-id": "#{chapter.id}"}
+              = link_to movie_chapter_path(chapter.movie,chapter) do 
+                %span.title
+                  %i.play_chapter.fa &nbsp;
+                  = chapter.title
+                %span.pray_time #{Time.at(chapter.start_time).utc.strftime('%M:%S')} ~ #{Time.at(chapter.end_time).utc.strftime('%M:%S')}
+        .movie--info-area
+          = render 'comment'
+        .movie--pr
+          = link_to "https://youtu.be/#{@chapter.movie.youtube_id}",{class: "movie--originator",target: "blank" } do
+            You Tubeで全編見る<i class="fa fa-external-link "></i> 

@@ -1,24 +1,36 @@
-# README
+# メモ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## moviesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false,index: true|
+|youtube_id|text|null: false, unique|
+|play_time|integer|null: false|
 
-Things you may want to cover:
+### Association
+- has_many : chaptars, through: :movie_chaptars
 
-* Ruby version
+## chapterテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false,index: true|
+|kana|string|null: false,index: true|
+|start_time|integer|null: false|
+|end_time|integer|null: false|
+|movie_id|references|null: false, foreign_key: true|
 
-* System dependencies
+### Association
+- belongs_to movie, through: :movie_chaptars
 
-* Configuration
+##お世話になったサイト・記事
+- Font Awesomeアイコンを素早く検索しコピー。Photoshopなどでの使い方
+https://www.pixelimage.jp/blog/2015/07/font_awesome.html
 
-* Database creation
+- 文字列を省略して「…」を付与する方法 – CSS/jQuery
+https://dev.classmethod.jp/ria/string-replace-css-and-jquery/
 
-* Database initialization
+- MySQLに大きなcsvをいれるまで
+https://qiita.com/tonhosshi/items/62a129582e805693c644
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- スクロールすると途中で表示される「トップへ戻るボタン」の実装。さらにフッター手前で止める場合の実装。
+https://recooord.org/scroll-to-top/

@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class SeachControllerTest < ActionDispatch::IntegrationTest
+class FavoritesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get seach_index_url
+    get favorites_index_url
     assert_response :success
   end
 
