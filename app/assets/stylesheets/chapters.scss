@@ -157,7 +157,8 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-        }
+          }
+          
         &.pray_time{
           width: 20%;
           text-align: right;
@@ -168,6 +169,10 @@
         border-top: #fff solid 1px;
         & a,span{
           color: #fff;
+          i.fa {
+            color: #fff;
+        }
+
         }
       }
       &:hover{
