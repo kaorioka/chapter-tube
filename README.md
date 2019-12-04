@@ -34,3 +34,6 @@ https://qiita.com/tonhosshi/items/62a129582e805693c644
 
 - スクロールすると途中で表示される「トップへ戻るボタン」の実装。さらにフッター手前で止める場合の実装。
 https://recooord.org/scroll-to-top/
+
+- 【初心者向け】railsアプリをherokuを使って確実にデプロイする方法【決定版】
+https://qiita.com/kazukimatsumoto/items/a0daa7281a3948701c39
