@@ -36,7 +36,7 @@
         color: #ccc;
   
         &:hover{
-          background-color: #FD0101;
+          background-color: $youtube_red;
           border:none;
   
           i.fa {
@@ -104,9 +104,9 @@
   
       &__title {
         display: block;
-          flex: auto;
-          width: 60%;
-          font-size: 24px;
+        flex: auto;
+        width: 60%;
+        font-size: 24px;
       }
       
     }
@@ -165,7 +165,7 @@
         }
       }
       &.activ{
-        background-color: #FD0101;
+        background-color: $youtube_red;
         border-top: #fff solid 1px;
         & a,span{
           color: #fff;
@@ -176,7 +176,7 @@
         }
       }
       &:hover{
-        background-color: #FD0101;
+        background-color: $youtube_red;
         border-top: #fff solid 1px;
         & a,span{
           color: #fff;
@@ -204,7 +204,7 @@
   
     &--comments {
       padding: 50px 0px 30px 0px;
-      border-bottom: 1px solid #ddd;      
+      border-bottom: 1px solid #ddd;
     }
     &--comment--info {
       padding-bottom: 30px;
@@ -237,7 +237,7 @@
       display: block;
       height: 50px;
       width: 300px;
-      background-color: #FD0101;
+      background-color: $youtube_red;
       color: #fff;
       line-height: 50px;
       text-align: center;
