@@ -20,12 +20,12 @@ h2.heading {
 }
 
 .wrapper {
-  background-color: #016E33;
+  background-color: $zakoshi_green;
 }
 
 .global-area {
   height: 50px;
-  background-color: #016E33;
+  background-color: $zakoshi_green;
   line-height: 50px;
   display: block;
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.45);
@@ -67,16 +67,15 @@ h2.heading {
           text-decoration: none;
 
           & i.fa{
-            color: #016E33;
+            color: $zakoshi_green;
             text-decoration: none;
           }
         }
-
         &.activ{
           background-color: #fff;
 
           & i.fa{
-            color: #016E33;
+            color: $zakoshi_green;
             text-decoration: none;
           }
 
@@ -89,7 +88,7 @@ h2.heading {
 #content {
   width: 100%;
   min-height: 100vh;
-  background-color: #016E33;
+  background-color: $zakoshi_green;
   // background-color: #f2f2f2z;
   display: block;
   padding-top: 50px;
