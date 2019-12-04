@@ -1,67 +1,776 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>ChapterTube</title>
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
-
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+<body>
+  <div class="wrapper" id="top">
+    <hedder class="global-area">
+      <h1 class="global-area--logo">
+        <a href="/">Chapter Tube
+        </a></h1>
+      <!-- <ul class="global-area--nav">
+        <li class="global-area--nav--page">
+          <a href="favorites/index"><i class="fa fa-star">お気に入り</i>
+          </a></li>
+        <li class="global-area--nav--page">
+          <a href="seaches/index"><i class="fa fa-search">検索</i>
+          </a></li>
+        <li class="global-area--nav--page">
+          <a href="users/index"><i class="fa fa-sign-in">ログイン</i>
+          </a></li>
+      </ul> -->
+    </hedder>
   </div>
+
+  <div id="content">
+    <div class="main">
+      <div class="seach">
+        <div id="info">
+          <div class="movie--info-box">
+            <h2 class="heading">
+              404エラー
+              <img width="100%" alt="ステンバーイステンバーイ" src="../app/assets/images/standby.gif">
+              <p>このページは削除されたか、URLが違います。</p>
+            </h2>
+          </div>
+          <div class="movie--info-box">
+
+
+            <a href="/">TOPへ戻る
+            </a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* line 2324, /Users/okakaori/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.5/app/assets/stylesheets/font-awesome.css.erb */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    /* line 2334, /Users/okakaori/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/font-awesome-rails-4.7.0.5/app/assets/stylesheets/font-awesome.css.erb */
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+    }
+
+    /*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+    /* line 9, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    html,
+    body,
+    div,
+    span,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    abbr,
+    address,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    samp,
+    small,
+    strong,
+    sub,
+    sup,
+    var,
+    b,
+    i,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+    }
+
+    /* line 30, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    body {
+      line-height: 1;
+    }
+
+    /* line 34, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    /* line 39, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    nav ul {
+      list-style: none;
+    }
+
+    /* line 43, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    /* line 47, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    /* line 53, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    a {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+    }
+
+    /* change colours to suit your needs */
+    /* line 62, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    ins {
+      background-color: #ff9;
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* change colours to suit your needs */
+    /* line 69, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    mark {
+      background-color: #ff9;
+      color: #000;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    /* line 76, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    del {
+      text-decoration: line-through;
+    }
+
+    /* line 80, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    abbr[title],
+    dfn[title] {
+      border-bottom: 1px dotted;
+      cursor: help;
+    }
+
+    /* line 85, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* change border colour to suit your needs */
+    /* line 91, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #cccccc;
+      margin: 1em 0;
+      padding: 0;
+    }
+
+    /* line 100, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/_reset.scss */
+    input,
+    select {
+      vertical-align: middle;
+    }
+
+    /* line 1, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    .chapter-pray-time {
+      position: absolute;
+      top: 128px;
+      right: 0;
+      background-color: #000;
+      color: #fff;
+      padding: 3px 3px;
+    }
+
+    /* line 10, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    .movie-box {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px #ddd solid;
+      margin-bottom: 30px;
+    }
+
+    /* line 16, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    .movie-box--list {
+      width: 32%;
+      position: relative;
+      padding-bottom: 20px;
+      padding-left: 1%;
+    }
+
+    /* line 22, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    .movie-box--list a {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+    }
+
+    /* line 31, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    .movie-box--list a :hover {
+      text-decoration: underline;
+    }
+
+    /* line 36, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    .movie-box--list--thumb {
+      width: 100%;
+      padding-bottom: 5px;
+    }
+
+    /* line 43, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    #page_top {
+      position: absolute;
+      top: 80vh;
+      z-index: 999;
+      right: -3vw;
+    }
+
+    /* line 50, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/parts.scss */
+    #page_top .page_top {
+      position: fixed;
+    }
+
+    /* line 1, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    * {
+      color: #0D0D0D;
+      list-style: none;
+    }
+
+    /* line 6, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    ::-webkit-scrollbar {
+      display: none;
+      -webkit-appearance: none;
+    }
+
+    /* line 11, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /* line 17, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    h2.heading {
+      font-size: 18px;
+      padding-bottom: 20px;
+    }
+
+    /* line 22, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .wrapper {
+      background-color: #016E33;
+    }
+
+    /* line 26, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area {
+      height: 50px;
+      background-color: #016E33;
+      line-height: 50px;
+      display: block;
+      box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.45);
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+    }
+
+    /* line 36, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--logo {
+      padding-left: 50px;
+    }
+
+    /* line 39, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--logo a {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* line 48, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--nav {
+      float: right;
+      position: absolute;
+      top: 0;
+      right: 0px;
+      padding-right: 30px;
+    }
+
+    /* line 55, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--nav--page {
+      float: left;
+      list-style: none;
+      padding: 0px 15px;
+    }
+
+    /* line 60, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--nav--page i.fa {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* line 65, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--nav--page:hover {
+      background-color: #fff;
+      text-decoration: none;
+    }
+
+    /* line 69, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--nav--page:hover i.fa {
+      color: #016E33;
+      text-decoration: none;
+    }
+
+    /* line 74, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--nav--page.activ {
+      background-color: #fff;
+    }
+
+    /* line 77, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    .global-area--nav--page.activ i.fa {
+      color: #016E33;
+      text-decoration: none;
+    }
+
+    /* line 88, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    #content {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #016E33;
+      display: block;
+      padding-top: 50px;
+      background-image: url(../app/assets/images/zakoshi_bkimg_r.png), url(../app/assets/images/zakoshi_bkimg_l.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: right, left;
+      background-position-y: top, top;
+      background-attachment: fixed, fixed;
+      background-size: 30%;
+    }
+
+    /* line 102, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    #content h2.heading {
+      font-size: 18px;
+    }
+
+    /* line 106, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    #content h3.heading {
+      font-size: 18px;
+      padding-bottom: 20px;
+    }
+
+    /* line 111, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    #content .main {
+      width: 680px;
+      min-height: 100vh;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* line 118, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/global-area.scss */
+    #content #info {
+      padding: 25px;
+      min-height: 100vh;
+      background: #f2f2f2;
+    }
+
+    /* line 1, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/dashboard.scss */
+    .cover-img {
+      width: 100%;
+    }
+
+    /* line 2, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side {
+      position: absolute;
+      right: -50px;
+      margin-top: 50px;
+    }
+
+    /* line 7, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu {
+      position: fixed;
+    }
+
+    /* line 11, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu a {
+      position: absolute;
+      width: 100%;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    /* line 17, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu a i.fa {
+      font-size: 25px;
+      color: #bbb;
+      padding: 15px 0px;
+    }
+
+    /* line 22, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu a span {
+      font-size: 12px;
+      display: block;
+      line-height: 24px;
+    }
+
+    /* line 29, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu--btn {
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      box-shadow: 0px 5px 10px -5px black;
+      color: #ccc;
+    }
+
+    /* line 38, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu--btn:hover {
+      background-color: #FD0101;
+      border: none;
+    }
+
+    /* line 42, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu--btn:hover i.fa {
+      color: #fff;
+    }
+
+    /* line 46, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .side--menu--btn:hover a,
+    #content .side--menu--btn:hover span {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* line 59, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie {
+      background: #f2f2f2;
+    }
+
+    /* line 62, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--player {
+      background-image: url(icon_loader_f_ww_01_s1.gif);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    /* line 68, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--info-box {
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    /* line 76, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--info-box__actions {
+      float: left;
+      padding-left: 10px;
+      text-align: center;
+    }
+
+    /* line 81, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--info-box__actions .favo {
+      width: 70px;
+    }
+
+    /* line 85, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--info-box__actions .like {
+      width: 50px;
+    }
+
+    /* line 89, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--info-box__actions .fa {
+      font-size: 25px;
+      color: #bbb;
+    }
+
+    /* line 95, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--info-box__actions .fa span {
+      font-size: 12px;
+      display: block;
+      color: #bbb;
+    }
+
+    /* line 105, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--info-box__title {
+      display: block;
+      flex: auto;
+      width: 60%;
+      font-size: 24px;
+    }
+
+    /* line 115, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--details {
+      padding-bottom: 30px;
+    }
+
+    /* line 118, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--details .origin-title {
+      font-size: 18px;
+      font-weight: initial;
+    }
+
+    /* line 124, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapters {
+      border-bottom: solid #ddd 1px;
+      padding-bottom: 50px;
+      margin-bottom: 30px;
+    }
+
+    /* line 130, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter {
+      height: 50px;
+      line-height: 50px;
+      background-color: #fff;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      position: relative;
+    }
+
+    /* line 138, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter:first-child {
+      border: none;
+    }
+
+    /* line 141, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter a {
+      font-size: 16px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* line 150, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter span {
+      padding-right: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* line 154, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter span.title {
+      font-weight: 600;
+      width: 73%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    /* line 162, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter span.pray_time {
+      width: 20%;
+      text-align: right;
+    }
+
+    /* line 167, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter.activ {
+      background-color: #FD0101;
+      border-top: #fff solid 1px;
+    }
+
+    /* line 170, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter.activ a,
+    #content .movie--chapter.activ span {
+      color: #fff;
+    }
+
+    /* line 172, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter.activ a i.fa,
+    #content .movie--chapter.activ span i.fa {
+      color: #fff;
+    }
+
+    /* line 178, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter:hover {
+      background-color: #FD0101;
+      border-top: #fff solid 1px;
+    }
+
+    /* line 181, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--chapter:hover a,
+    #content .movie--chapter:hover span {
+      color: #fff;
+    }
+
+    /* line 188, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie #input-comment {
+      height: 45px;
+      width: 76%;
+      background-color: #fff;
+      font-size: 18px;
+    }
+
+    /* line 195, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie #send-commen {
+      height: 50px;
+      width: 21%;
+      background-color: #0960D4;
+      float: right;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+    }
+
+    /* line 205, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--comments {
+      padding: 50px 0px 30px 0px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* line 209, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--comment--info {
+      padding-bottom: 30px;
+    }
+
+    /* line 213, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--comment--info ul {
+      padding-bottom: 10px;
+    }
+
+    /* line 217, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--comment--info__user {
+      float: left;
+      padding-right: 20px;
+      font-weight: 600;
+    }
+
+    /* line 223, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--comment--info--content {
+      font-size: 18px;
+    }
+
+    /* line 229, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie--pr {
+      clear: both;
+      content: "";
+      display: block;
+      padding: 30px 0px;
+    }
+
+    /* line 236, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie .movie--originator {
+      display: block;
+      height: 50px;
+      width: 300px;
+      background-color: #FD0101;
+      color: #fff;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 50px;
+      text-decoration: none;
+      margin: 0 auto;
+    }
+
+    /* line 248, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/chapters.scss */
+    #content .movie .movie--originator i.fa.fa-external-link {
+      color: #fff;
+      padding-left: 10px;
+    }
+
+    /* line 1, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/seaches.scss */
+    #seach {
+      height: 40px;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    /* line 5, /Users/okakaori/projects/chapter-tube/app/assets/stylesheets/seaches.scss */
+    #seach .result {
+      float: right;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  </style>
+
+
 </body>
+
 </html>

@@ -3,6 +3,16 @@
   .main
     = render 'layouts/page_top'
     .seach
-      #info  
-        %h2.heading
-          検索
+      #info
+        .movie--info-box
+          %h2.heading
+            検索
+            = image_tag "standby.gif", width: "100%", alt: "ステンバーイステンバーイ"
+            %p 準備中のコンテンツです。下記のランダム動画で時間を潰して待ってね❤️
+        .movie--info-box
+          %h2.heading
+            ランダム
+          %ul.movie-box
+            = render partial: 'layouts/movie-box', collection: @chapter, as: 'chapter'
+          = link_to root_path do
+            TOPへ戻る
