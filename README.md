@@ -22,7 +22,8 @@
 ### Association
 - belongs_to movie, through: :movie_chaptars
 
-##お世話になったサイト・記事
+## お世話になったサイト・記事
+
 - Font Awesomeアイコンを素早く検索しコピー。Photoshopなどでの使い方
 https://www.pixelimage.jp/blog/2015/07/font_awesome.html
 
