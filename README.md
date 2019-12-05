@@ -41,3 +41,6 @@ https://qiita.com/kazukimatsumoto/items/a0daa7281a3948701c39
 
 - 【herokuコマンド】createからdestroyまで
 https://qiita.com/chihiro/items/5c3ff400f6cb99deb945
+
+- rails5でfaviconの設定
+https://tasotasoso.hatenablog.com/entry/2018/10/16/220921
