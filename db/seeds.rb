@@ -4,7 +4,7 @@ require "csv"
 CSV.foreach('db/movies.csv') do |row|
 #foreachは、ファイル（hoge.csv）の各行を引数として、ブロック(do~endまでを範囲とする『引数のかたまり』)を繰り返し実行する
 #rowには、読み込まれた行が代入される
-Movie.create(name: row[1], youtube_id: row[2], play_time: row[3])
+Movie.create(title: row[1], youtube_id: row[2], play_time: row[3])
 #テーブルの各カラムに、各行のn番目の値を代入している。
 
 end
