@@ -38,3 +38,6 @@ https://recooord.org/scroll-to-top/
 
 - 【初心者向け】railsアプリをherokuを使って確実にデプロイする方法【決定版】
 https://qiita.com/kazukimatsumoto/items/a0daa7281a3948701c39
+
+- 【herokuコマンド】createからdestroyまで
+https://qiita.com/chihiro/items/5c3ff400f6cb99deb945
