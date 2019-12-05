@@ -1,7 +1,8 @@
 class DashboardController < ApplicationController
 
     def index
-      @chapter = Chapter.all.order("RAND()").limit(15)
+      rand = Rails.env.production? ? "RANDOM()" : "rand()"
+      @chapter = Chapter.all.order(rand).limit(15)
     end
 
   end
