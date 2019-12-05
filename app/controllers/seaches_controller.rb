@@ -1,7 +1,8 @@
 class SeachesController < ApplicationController
 
   def index
-    @chapter = Chapter.all.order("RAND()").limit(6)
+    rand = Rails.env.production? ? "RANDOM()" : "rand()"
+    @chapter = Chapter.all.order(rand).limit(6)
   end
   
 end
