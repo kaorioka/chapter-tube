@@ -1,4 +1,4 @@
-class Movie < ApplicationRecord  
+class Movie < ApplicationRecord
   has_many :chaptars
   validates :title, presence: true
   validates :youtube_id, presence: true, uniqueness: true

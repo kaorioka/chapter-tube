@@ -30,8 +30,8 @@ https://www.pixelimage.jp/blog/2015/07/font_awesome.html
 - 文字列を省略して「…」を付与する方法 – CSS/jQuery
 https://dev.classmethod.jp/ria/string-replace-css-and-jquery/
 
-- MySQLに大きなcsvをいれるまで
-https://qiita.com/tonhosshi/items/62a129582e805693c644
+- Railsで、DBからCSVファイルを読み込む方法
+https://qiita.com/taccaya/items/4dc7706da0ec79d61544
 
 - スクロールすると途中で表示される「トップへ戻るボタン」の実装。さらにフッター手前で止める場合の実装。
 https://recooord.org/scroll-to-top/
