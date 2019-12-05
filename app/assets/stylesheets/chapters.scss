@@ -245,6 +245,16 @@
       text-decoration: none;
       margin: 0 auto;
 
+      &:hover{
+        background-color: #fff;
+        color: $youtube_red;
+        border: solid $youtube_red 3px;
+        box-sizing: border-box;
+        i.fa.fa-external-link {
+          color: $youtube_red;
+        }
+      }
+
       i.fa.fa-external-link {
         color: #fff;
         padding-left: 10px;
