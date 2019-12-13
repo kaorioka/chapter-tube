@@ -41,6 +41,9 @@ h2.heading {
         font-weight: 800;
         color:#fff;
         text-decoration: none;
+        &:hover {
+          opacity: 0.5;
+        }
       }
       
     }
