@@ -44,3 +44,6 @@ https://qiita.com/chihiro/items/5c3ff400f6cb99deb945
 
 - rails5でfaviconの設定
 https://tasotasoso.hatenablog.com/entry/2018/10/16/220921
+
+- railsのindexとforeign_keyについておしえてください。
+https://teratail.com/questions/63406
