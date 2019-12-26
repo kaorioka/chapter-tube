@@ -10,6 +10,19 @@
       %li.global-area--nav--page
         = link_to seaches_index_path do
           %i.fa.fa-search 検索
-      %li.global-area--nav--page
-        = link_to new_user_session_path do
-          %i.fa.fa-sign-in ログイン
+      - if user_signed_in?
+        %li.global-area--nav--page
+          = link_to "#" do
+            %i.fa.fa-user
+              = current_user.nickname
+          %ul.sign_up_menu
+            %li
+              = link_to "#" do
+                %i.fa.fa-user マイページ
+            %li
+              = link_to destroy_user_session_path, method: :delete do
+                %i.fa.fa-sign-out ログアウト
+      - else
+        %li.global-area--nav--page
+          = link_to new_user_session_path do
+            %i.fa.fa-sign-in ログイン
