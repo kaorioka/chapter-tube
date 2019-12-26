@@ -8,7 +8,7 @@
 |play_time|integer|null: false|
 
 ### Association
-- has_many : chaptars, through: :movie_chaptars
+- has_many : chaptars
 
 ## chapterテーブル
 |Column|Type|Options|
@@ -20,7 +20,17 @@
 |movie_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to movie, through: :movie_chaptars
+- belongs_to movie
+
+## users
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false, unique: true|
+|password|string|null: false|
+
+### Association
+- to be continue
 
 ## お世話になったサイト・記事
 
@@ -44,3 +54,6 @@ https://qiita.com/chihiro/items/5c3ff400f6cb99deb945
 
 - rails5でfaviconの設定
 https://tasotasoso.hatenablog.com/entry/2018/10/16/220921
+
+- railsのindexとforeign_keyについておしえてください。
+https://teratail.com/questions/63406
