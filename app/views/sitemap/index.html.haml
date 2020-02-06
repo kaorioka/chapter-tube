@@ -5,13 +5,17 @@
     .seach
       #info
         %table.sitemap
-          %caption chapter
+          %caption favorites
           %tr
             %th title
-            %th 元動画
-          %tr
-            %td
-              = link_to movie_chapter_path(c.movie,c) do
-                = c.title
-            %td
-              = c.movie.title
+            %th user
+          - if @favorites
+            - @favorites.each do |f|
+              %tr
+                %td
+                  = link_to movie_chapter_path(f.chapter.movie,f.chapter) do
+                    = f.chapter.title
+                %td
+                  = f.user.nickname
+          - else
+            %p ないです
