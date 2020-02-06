@@ -1,6 +1,6 @@
 class SitemapController < ApplicationController
   def index
-    @favorites = Favorite.where(params[:user_id])
+    @favorites = Favorite.where(user_id: current_user.id)
   end
 end
   
