@@ -1,3 +1,23 @@
-// Place all the styles related to the favorites controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+table.sitemap{
+  caption{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  th{
+    background: #ddd  ;
+    border: 1px #333 solid;
+    height: 2rem;
+    vertical-align: middle;
+  }
+  td{
+    border: 1px #333 solid;
+    background: #fff;
+    height: 2rem;
+    vertical-align: middle;
+    font-size: 12px;
+    a{
+      color: blue ;
+    }
+  }
+}
