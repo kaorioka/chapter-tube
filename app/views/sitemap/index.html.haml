@@ -1,0 +1,12 @@
+= render 'layouts/hedder'
+#content
+  .main
+    %table
+      %caption chapter
+      %tr
+        %th title
+      - @chapters.each do |c|
+        %tr
+          %td
+            = link_to movie_chapter_path(c.movie,c) do
+              = c.title
