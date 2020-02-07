@@ -13,9 +13,8 @@
           %h2.heading
             ランダム
           %ul.movie-box
-            - if @favorites
-              = render partial: 'layouts/movie-box', collection: @favorites.chapter, as: 'chapter'
+            - if @chapters
+              = render partial: 'layouts/movie-box', collection: @chapters, as: 'chapter'
             - else
-              %p  無いです
           = link_to root_path do
             TOPへ戻る
