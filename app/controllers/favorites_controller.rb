@@ -1,8 +1,12 @@
 class FavoritesController < ApplicationController
 
   def index
-    rand = Rails.env.production? ? "RANDOM()" : "rand()"
-    @chapter = Chapter.all.order(rand).limit(6)
+    @favorites = Favorite.where(user_id: current_user)
+
+    @chapters = []
+    @favorites.each do |f|
+        @chapters << Chapter.where(id: f.chapter_id)
+    end
   end
-  
-end
+
+end 
