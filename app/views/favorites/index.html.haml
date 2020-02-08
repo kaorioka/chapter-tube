@@ -8,11 +8,11 @@
           %h2.heading 
             お気に入り
           - if user_signed_in?
-            .movie--info-box
-              %ul.movie-box
-                - if @chapters
+            - if @chapters.length > 0 
+              .movie--info-box
+                %ul.movie-box
                   = render partial: 'layouts/movie-box', collection: @chapters, as: 'chapter'
-                - else
-                  %li お気に入りはまだ登録されていません。
+            - else
+              %p お気に入りはまだ登録されていません。
           - else
             %p  ログインするとお気に入り機能を使用できます。
