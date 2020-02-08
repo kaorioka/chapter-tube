@@ -9,7 +9,11 @@ class FavoritesController < ApplicationController
       # @chapters = Chapter.where(id: chapter_id = Favorite.where(user_id: current_user.id).select(:chapter_id))
     else
     end
-
   end
+
+  def create
+  end
+
+
 
 end 
