@@ -9,10 +9,10 @@
         = link_to sitemap_index_path do
           サイトマップ
       %li.global-area--nav--page
-        = link_to movies_index_path do
+        = link_to movies_path  do
           動画一覧  
       %li.global-area--nav--page
-        = link_to favorites_index_path do
+        = link_to favorites_path do
           %i.fa.fa-star お気に入り
       %li.global-area--nav--page
         = link_to seaches_index_path do 
@@ -23,9 +23,6 @@
             %i.fa.fa-user
               = current_user.nickname
           %ul.sign_up_menu
-            %li
-              = link_to "#" do
-                %i.fa.fa-user マイページ
             %li
               = link_to destroy_user_session_path, method: :delete do
                 %i.fa.fa-sign-out ログアウト
