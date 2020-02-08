@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
 
 
   def index
-    @chapters = Chapter.all 
+    @chapters = Chapter.all.first(50)
   end
 
   def show
