@@ -7,8 +7,9 @@
         %table.sitemap
           %caption chapter
           %tr
-            %th title
+            %th title   
             %th 元動画
+            %th favo
           - @chapters.each do |c|
             %tr
               %td
@@ -16,3 +17,6 @@
                   = c.title
               %td
                 = c.movie.title
+              %td
+                = form_tag("/favorites",method: :post)do
+                  %input{type: "submit"}
