@@ -1,14 +1,15 @@
 class FavoritesController < ApplicationController
 
   def index
-    @chapters = Chapter.where(id: chapter_id = Favorite.where(user_id: current_user.id).select(:chapter_id))
+    if user_signed_in?
+      # scopeで書いてスッキリさせるバージョン。これの定義さきはchapterモデル
+      @chapters = Chapter.search_chapters(current_user)
 
-    # @favorites = Favorite.where(user_id: current_user)
+      # まとめてSQLで書くパターン
+      # @chapters = Chapter.where(id: chapter_id = Favorite.where(user_id: current_user.id).select(:chapter_id))
+    else
+    end
 
-    # @chapters = []
-    # @favorites.each do |f|
-    #     @chapters << Chapter.where(id: f.chapter_id)
-    # end
   end
 
 end 
