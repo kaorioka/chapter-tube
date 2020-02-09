@@ -2,7 +2,8 @@ class MoviesController < ApplicationController
 
 
   def index
-    @chapters = Chapter.all.first(50)
+    rand = Rails.env.production? ? "RANDOM()" : "rand()"
+    @chapters = Chapter.all.order(rand).limit(50)
   end
 
   def show
