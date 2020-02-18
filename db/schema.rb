@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_19_110337) do
+ActiveRecord::Schema.define(version: 2020_02_18_154838) do
 
   create_table "chapters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title"
@@ -20,6 +20,23 @@ ActiveRecord::Schema.define(version: 2019_12_19_110337) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "movie_id"
+  end
+
+  create_table "coments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "text"
+    t.bigint "user_id"
+    t.bigint "chapter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapter_id"], name: "index_coments_on_chapter_id"
+    t.index ["user_id"], name: "index_coments_on_user_id"
+  end
+
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "chapter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -43,4 +60,6 @@ ActiveRecord::Schema.define(version: 2019_12_19_110337) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "coments", "chapters"
+  add_foreign_key "coments", "users"
 end
