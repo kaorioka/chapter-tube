@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/create'
-  get 'comments/destroy'
-  get 'comments/update'
   devise_for :users 
   get 'users/index'
   get 'favorites/index'
