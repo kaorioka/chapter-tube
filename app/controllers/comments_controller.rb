@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   def create
-    Comment.create(text: comment_params[:text], user_id: current_user.id, chapter_id: comment_params[:tweet_id])
+    chapter = Chapter.find(comment_params[:chapter_id])
+    Comment.create(text: comment_params[:text], user_id: current_user.id, chapter_id: chapter.id)
+    redirect_to movie_chapter_path(chapter.movie.id,chapter.id)
   end
 
   def destroy
@@ -14,4 +16,3 @@ class CommentsController < ApplicationController
     params.parmit(:text, :chapter_id)
   end
 end
-
