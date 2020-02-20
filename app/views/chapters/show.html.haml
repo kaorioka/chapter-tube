@@ -32,7 +32,24 @@
                   = chapter.title
                 %span.pray_time #{Time.at(chapter.start_time).utc.strftime('%M:%S')} ~ #{Time.at(chapter.end_time).utc.strftime('%M:%S')}
         .movie--info-area
-          = render 'comment'
+        %h2#comment.heading コメント
+        = form_tag(movie_chapter_comments_path(@chapter.movie.id, @chapter.id), method: :post)  do
+          %input#input-comment{name: "text", size:"40", type: "text"}
+          %input#send-comment{type: "submit", value: "送信"}
+        - if @comments.length == 0
+          %br/
+          %p コメントはまだありません。
+        - else
+          .movie--comments
+            - @comments.each do |c|
+              .movie--comment--info
+                %ul
+                  %li.movie--comment--info__user
+                    = c.user.nickname
+                  %li.movie--comment--info__data
+                    = c.created_at.strftime("%Y/%-m/%-d %-H:%-M")
+                %p.movie--comment--info--content
+                  = c.text
         .movie--pr
           = link_to "https://youtu.be/#{@chapter.movie.youtube_id}",{class: "movie--originator",target: "blank" } do
             You Tubeで全編見る<i class="fa fa-external-link "></i> 
