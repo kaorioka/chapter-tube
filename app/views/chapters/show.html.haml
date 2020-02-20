@@ -37,57 +37,15 @@
           %input#input-comment{name: "text", size:"40", type: "text"}
           %input#send-comment{type: "submit", value: "送信"}
         .movie--comments
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い。
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い。
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い
-          .movie--comment--info
-            %ul
-              %li.movie--comment--info__user 名前
-              %li.movie--comment--info__data 2019/11/15 10:10
-            %p.movie--comment--info--content 面白い。面白い。面白い。面白い
-          -# = render partial: 'comment', collection: @chapter, as: 'chapter
+          - @comments.each do |c|
+            .movie--comment--info
+              %ul
+                %li.movie--comment--info__user
+                  = c.user.nickname
+                %li.movie--comment--info__data
+                  = c.created_at.strftime("%Y/%-m/%-d %-H:%-M")
+              %p.movie--comment--info--content
+                = c.text
         .movie--pr
           = link_to "https://youtu.be/#{@chapter.movie.youtube_id}",{class: "movie--originator",target: "blank" } do
             You Tubeで全編見る<i class="fa fa-external-link "></i> 
