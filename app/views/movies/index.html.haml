@@ -10,6 +10,7 @@
             %th title   
             %th 元動画
             %th favo
+            %th like
           - @chapters.each do |c|
             %tr
               %td
@@ -18,4 +19,6 @@
               %td
                 = c.movie.title
               %td
-                テスト
+                = button_to '☆', movie_chapter_favorites_path(c.movie,c)
+              %td
+                こ↑こ↓

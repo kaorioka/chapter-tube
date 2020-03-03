@@ -12,8 +12,13 @@ class FavoritesController < ApplicationController
   end
 
   def create
+    Favorite.create(chapter_id: favorite_params[:chapter_id], user_id: current_user.id)
+    redirect_to root_path
   end
 
-
+  private
+  def favorite_params
+    params.permit(:chapter_id)
+  end
 
 end 

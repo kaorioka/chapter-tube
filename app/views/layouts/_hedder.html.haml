@@ -19,6 +19,7 @@
           %i.fa.fa-search 検索
       - if user_signed_in?
         %li.global-area--nav--page
+    
           = link_to "#" do
             %i.fa.fa-user
               = current_user.nickname
