@@ -19,6 +19,12 @@
               %td
                 = c.movie.title
               %td
-                = button_to '☆', movie_chapter_favorites_path(c.movie,c)
+                - if current_user.already_favorited?(c)
+                  = button_to '済', movie_chapter_favorites_path(c.movie,c)
+                - else
+                  = button_to '☆', movie_chapter_favorites_path(c.movie,c)
               %td
-                = button_to 'b', movie_chapter_likes_path(c.movie,c)
+                - if current_user.already_liked?(c)
+                  = button_to '済', movie_chapter_likes_path(c.movie,c)
+                - else
+                  = button_to 'b', movie_chapter_likes_path(c.movie,c)
