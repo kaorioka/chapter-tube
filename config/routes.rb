@@ -9,5 +9,8 @@ Rails.application.routes.draw do
     end
   end
   resources :favorites, only: [:index, :create]
+  resources :likes, only: [:index, :create]
+
+  # debug終了後に削除
   resources :sitemap, only: [:index]
 end
