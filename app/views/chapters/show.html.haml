@@ -30,7 +30,8 @@
                 %span.title
                   %i.play_chapter.fa &nbsp;
                   = chapter.title
-                %span.pray_time #{Time.at(chapter.start_time).utc.strftime('%M:%S')} ~ #{Time.at(chapter.end_time).utc.strftime('%M:%S')}
+                %span.pray_time 
+                  = "#{Time.at(chapter.start_time).utc.strftime('%M:%S')} ~ #{Time.at(chapter.end_time).utc.strftime('%M:%S')}"
         .movie--info-area
         %h2#comment.heading コメント
         = form_tag(movie_chapter_comments_path(@chapter.movie.id, @chapter.id), method: :post)  do

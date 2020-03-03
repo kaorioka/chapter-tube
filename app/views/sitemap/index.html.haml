@@ -1,0 +1,21 @@
+= render 'layouts/hedder'
+#content
+  .main
+    = render 'layouts/page_top'
+    .seach
+      #info
+        %table.sitemap
+          %caption favorites
+          %tr
+            %th title
+            %th user
+          - if @favorites
+            - @favorites.each do |f|
+              %tr
+                %td
+                  = link_to movie_chapter_path(f.chapter.movie,f.chapter) do
+                    = f.chapter.title
+                %td
+                  = f.user.nickname
+          - else
+            %p ないです

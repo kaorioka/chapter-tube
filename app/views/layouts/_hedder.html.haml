@@ -3,12 +3,19 @@
     %h1.global-area--logo
       = link_to root_path do
         = image_tag 'logo', alt: '', height: '50', width: '200', class: 'logo'
+
     %ul.global-area--nav
+      -# %li.global-area--nav--page
+      -#   = link_to sitemap_index_path do
+      -#     debug
+      -# %li.global-area--nav--page
+      -#   = link_to movies_path  do
+      -#     動画一覧  
       %li.global-area--nav--page
-        = link_to favorites_index_path do
+        = link_to favorites_path do
           %i.fa.fa-star お気に入り
       %li.global-area--nav--page
-        = link_to seaches_index_path do
+        = link_to seaches_index_path do 
           %i.fa.fa-search 検索
       - if user_signed_in?
         %li.global-area--nav--page
@@ -16,9 +23,6 @@
             %i.fa.fa-user
               = current_user.nickname
           %ul.sign_up_menu
-            %li
-              = link_to "#" do
-                %i.fa.fa-user マイページ
             %li
               = link_to destroy_user_session_path, method: :delete do
                 %i.fa.fa-sign-out ログアウト

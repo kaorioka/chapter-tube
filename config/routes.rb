@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root to: "dashboard#index"
   get 'users/index'
@@ -9,4 +10,6 @@ Rails.application.routes.draw do
       resources :comments, only: [:create, :destroy, :update]
     end
   end
+  resources :favorites, only: [:index, :create]
+  resources :movies, only: [:index, :show]
 end
