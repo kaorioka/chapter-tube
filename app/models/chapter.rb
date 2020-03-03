@@ -1,9 +1,10 @@
 class Chapter < ApplicationRecord
   belongs_to :movie
-  has_many :favorites
   has_many :chapters, through: :favorites
   has_many :comments
-  
+  has_many :favorites
+  has_many :likes
+
   validates :title, presence: true
   validates :kana, presence: true
   validates :start_time, presence: true
