@@ -5,12 +5,12 @@
         = image_tag 'logo', alt: '', height: '50', width: '200', class: 'logo'
 
     %ul.global-area--nav
-      -# %li.global-area--nav--page
-      -#   = link_to sitemap_index_path do
-      -#     debug
-      -# %li.global-area--nav--page
-      -#   = link_to movies_path  do
-      -#     動画一覧  
+      %li.global-area--nav--page
+        = link_to sitemap_index_path do
+          debug
+      %li.global-area--nav--page
+        = link_to movies_path  do
+          動画一覧  
       %li.global-area--nav--page
         = link_to favorites_path do
           %i.fa.fa-star お気に入り
