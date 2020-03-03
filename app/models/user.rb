@@ -8,4 +8,12 @@ class User < ApplicationRecord
   has_many :comments
   has_many :favorites
   has_many :likes
+
+  def already_favorited?(chapter)
+    self.favorites.exits?(chapter_id: chapter.id)
+  end
+
+  def already_liked?(chapter)
+    self.likes.exits?(chapter_id: chapter.id)
+  end
 end
