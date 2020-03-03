@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
   def index
     if user_signed_in?
       # scopeで書いてスッキリさせるバージョン。これの定義さきはchapterモデル
-      @chapters = Chapter.search_chapters(current_user)
+      @chapters = Chapter.search_chapters(current_user).order(created_at: "DESC")
 
       # まとめてSQLで書くパターン
       # @chapters = Chapter.where(id: chapter_id = Favorite.where(user_id: current_user.id).select(:chapter_id))
@@ -13,7 +13,7 @@ class FavoritesController < ApplicationController
 
   def create
     Favorite.create(chapter_id: favorite_params[:chapter_id], user_id: current_user.id)
-    redirect_to root_path
+    redirect_to movies_path
   end
 
   private
