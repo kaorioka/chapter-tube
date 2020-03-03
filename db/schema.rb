@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2020_02_19_045346) do
-
+ActiveRecord::Schema.define(version: 2020_03_03_104022) do
 
   create_table "chapters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title"
@@ -34,12 +32,20 @@ ActiveRecord::Schema.define(version: 2020_02_19_045346) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "chapter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "chapter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapter_id"], name: "index_likes_on_chapter_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -65,4 +71,6 @@ ActiveRecord::Schema.define(version: 2020_02_19_045346) do
 
   add_foreign_key "comments", "chapters"
   add_foreign_key "comments", "users"
+  add_foreign_key "likes", "chapters"
+  add_foreign_key "likes", "users"
 end
