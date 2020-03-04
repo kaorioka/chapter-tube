@@ -7,6 +7,12 @@ class LikesController < ApplicationController
     redirect_to movies_path
   end
 
+  def destroy
+    @like = Like.find_by(chapter_id: like_params[:chapter_id], user_id: current_user.id)
+    @like.destroy
+    redirect_to movies_path
+  end
+
   private
   def like_params
     params.permit(:chapter_id)
