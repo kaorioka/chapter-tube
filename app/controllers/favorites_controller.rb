@@ -12,14 +12,14 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    Favorite.create(chapter_id: favorite_params[:chapter_id], user_id: current_user.id)
-    redirect_to movies_path
+    @favorite = Favorite.create(chapter_id: favorite_params[:chapter_id], user_id: current_user.id)
+    redirect_to movie_chapter_path(@favorite.chapter.movie,@favorite.chapter)
   end
 
   def destroy
     @favorite = Favorite.find_by(chapter_id: favorite_params[:chapter_id], user_id: current_user.id)
     @favorite.destroy
-    redirect_to movies_path
+    redirect_to movie_chapter_path(@favorite.chapter.movie,@favorite.chapter)
   end
 
   private

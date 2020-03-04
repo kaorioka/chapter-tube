@@ -3,14 +3,14 @@ class LikesController < ApplicationController
   end
 
   def create
-    Like.create(chapter_id: like_params[:chapter_id], user_id: current_user.id)
-    redirect_to movies_path
+    @like = Like.create(chapter_id: like_params[:chapter_id], user_id: current_user.id)
+    redirect_to movie_chapter_path(@like.chapter.movie,@like.chapter)
   end
 
   def destroy
     @like = Like.find_by(chapter_id: like_params[:chapter_id], user_id: current_user.id)
     @like.destroy
-    redirect_to movies_path
+    redirect_to movie_chapter_path(@like.chapter.movie,@like.chapter)
   end
 
   private
