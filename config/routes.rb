@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :movies, only: [:index, :show] do
     resources :chapters do
       resources :comments, only: [:create, :destroy, :update]
-      resources :favorites, only: [:create]
-      resources :likes, only: [:create]    
+      resources :favorites, only: [:create, :destroy]
+      resources :likes, only: [:create, :destroy]    
     end
   end
 
