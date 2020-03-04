@@ -20,11 +20,13 @@
                 = c.movie.title
               %td
                 - if current_user.already_favorited?(c)
-                  = button_to '済', movie_chapter_favorites_path(c.movie,c)
+                  - favo_id = c.favorites.find_by(user_id: current_user.id).id
+                  = button_to '済', movie_chapter_favorite_path(c.movie,c,favo_id), method: :delete
                 - else
                   = button_to '☆', movie_chapter_favorites_path(c.movie,c)
               %td
                 - if current_user.already_liked?(c)
-                  = button_to '済', movie_chapter_likes_path(c.movie,c)
+                  - like_id = c.likes.find_by(user_id: current_user.id).id
+                  = button_to '済', movie_chapter_like_path(c.movie,c,like_id), method: :delete
                 - else
                   = button_to 'b', movie_chapter_likes_path(c.movie,c)
