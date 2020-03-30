@@ -11,27 +11,29 @@
             = @chapter.title
           %ul.movie--info-box__actions
             %li.movie--info-box__actions.favo
-              - if current_user.already_favorited?(@chapter)
-                - favorite_id = @chapter.favorites.find_by(user_id: current_user.id).id
-                = button_to movie_chapter_favorite_path(@chapter.movie,@chapter,favorite_id), method: :delete do
-                  .fa.fa-star-o
-                    %span 済
-              - else
-                = button_to movie_chapter_favorites_path(@chapter.movie,@chapter) do
-                  .fa.fa-star-o
-                    %span お気に入り
+              - if current_user
+                - if current_user.already_favorited?(@chapter)
+                  - favorite_id = @chapter.favorites.find_by(user_id: current_user.id).id
+                  = button_to movie_chapter_favorite_path(@chapter.movie,@chapter,favorite_id), method: :delete do
+                    .fa.fa-star-o
+                      %span 済
+                - else
+                  = button_to movie_chapter_favorites_path(@chapter.movie,@chapter) do
+                    .fa.fa-star-o
+                      %span お気に入り
             %li.movie--info-box__actions.like
-              - if current_user.already_liked?(@chapter)
-                - like_id = @chapter.likes.find_by(user_id: current_user.id).id
-                = button_to movie_chapter_like_path(@chapter.movie,@chapter,like_id), method: :delete do
-                  .fa.fa-thumbs-o-up
-                    %span
-                      = "#{@chapter.likes.length}(済)"
-              - else
-                = button_to movie_chapter_likes_path(@chapter.movie,@chapter) do
-                  .fa.fa-thumbs-o-up
-                    %span
-                      = @chapter.likes.length
+              - if current_user
+                - if current_user.already_liked?(@chapter)
+                  - like_id = @chapter.likes.find_by(user_id: current_user.id).id
+                  = button_to movie_chapter_like_path(@chapter.movie,@chapter,like_id), method: :delete do
+                    .fa.fa-thumbs-o-up
+                      %span
+                        = "#{@chapter.likes.length}(済)"
+                - else
+                  = button_to movie_chapter_likes_path(@chapter.movie,@chapter) do
+                    .fa.fa-thumbs-o-up
+                      %span
+                        = @chapter.likes.length
         .movie--details
           %h2#chapters.heading 動画の詳細
           %h3.origin-title
